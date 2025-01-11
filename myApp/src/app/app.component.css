@@ -5,6 +5,8 @@ main {
     display: grid;
     grid-auto-flow: row;
     gap: 2rem;
+    background-color: rgb(227, 224, 228);
+    border: 2px dashed black;
     
   }
   main>ul{

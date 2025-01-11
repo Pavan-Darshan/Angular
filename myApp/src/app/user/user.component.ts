@@ -3,6 +3,21 @@ import { Component, computed, EventEmitter, input, Input, output, Output, signal
 
 
 // const index=Math.floor(Math.random()*DUMMY_USERS.length);
+
+
+// type User={
+//   id:string,
+//   avatar:string,
+//   name:string
+// } or
+interface User{
+  id:string,
+  avatar:string,
+  name:string
+}
+
+
+
 @Component({
   selector: 'app-user',
   imports: [],
@@ -16,14 +31,16 @@ export class UserComponent {
 
 
   // Input Decorator---------->
-  @Input({required:true}) id!:string;
-  @Input({required:true}) avatar !:string;
-  @Input({required:true}) name!:string;
+  // @Input({required:true}) id!:string;
+  // @Input({required:true}) avatar !:string;
+  // @Input({required:true}) name!:string;
+
+  @Input({required:true}) users!: User;
   @Output() select=new EventEmitter<string>();
   
 
   get imagePath(){
-    return 'assets/users/' + this.avatar;
+    return 'assets/users/' + this.users.avatar;
   }
   //input signals------------------>
   // avatar = input.required<string>();
@@ -34,7 +51,10 @@ export class UserComponent {
   onSelect(){
     // const index=Math.floor(Math.random()*DUMMY_USERS.length);
     // this.selectuser.set(DUMMY_USERS[index]);
-    this.select.emit(this.name);
+    // this.select.emit(this.name);
+    this.select.emit(this.users.id);
+    
   }
+
 
 }
