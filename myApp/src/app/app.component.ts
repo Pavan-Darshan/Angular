@@ -8,7 +8,7 @@ import { NgFor,NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent,AppImage,UserComponent,TasksComponent],
+  standalone:false,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

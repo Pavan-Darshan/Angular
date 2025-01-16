@@ -1,2 +1,23 @@
-<h2>{{name}}</h2>
-<img [src]="avatar" alt="" style="width: 100px;height: 100px;">
+@if (isAddingTask) {
+    <app-new-task [userId]="userId" (close)="onCloseAddTask()" />
+}
+<section id="tasks">
+    <header>
+        
+        <h2>{{name}}'s Task</h2>
+        <img [src]="avatar" alt="" style="width: 100px;height: 100px;">
+    <menu>
+        <button (click)="onStartAddTask()">Add Task</button>
+    </menu>
+
+    </header>
+    <ul>
+        @for(task of selectUsertask; track task.id){
+            <li>
+                <app-task [userTask]="task" />
+            </li>
+        }
+    
+        
+    </ul>
+</section>
