@@ -1,0 +1,16 @@
+ 
+.primary {
+  color: red;
+}
+.secondary {
+  color: black;
+  font-size: 24px;
+  text-shadow: 1px 1px 5px red;
+}
+ .cssClass1{
+    font-size: 32px;
+ }
+ .cssClass2{
+    color: chartreuse;
+    text-shadow: 1px 1px 5px blue;
+ }

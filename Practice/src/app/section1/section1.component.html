@@ -1,0 +1,27 @@
+<ul>
+    <li *ngFor="let item of movies">
+        {{" "+item.title}}{{"Director : "+item.director}}
+    </li>
+</ul>
+
+<hr>
+<input type="text" [(ngModel)]="num" placeholder="enter 0-5 number">
+<div [ngSwitch]="num">
+    
+   <div *ngSwitchCase="0">Zero</div>
+   <div *ngSwitchCase="1">One</div>
+   <div *ngSwitchCase="2">Two</div>
+   <div *ngSwitchCase="3">Three</div>
+   <div *ngSwitchCase="4">Four</div>
+   <div *ngSwitchDefault>Five</div>
+
+</div>
+<div *ngIf="num=='5';else elseBlock">
+    <p>value is {{num}}</p>
+</div>
+
+<ng-template #elseBlock>
+    <p>No Value</p>
+
+</ng-template>
+

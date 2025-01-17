@@ -1,0 +1,37 @@
+<div hidden>
+  
+
+  <button [disabled]="disable"> click here</button>
+<h2 [innerText]="title" class="heading" ></h2>
+<h1 [style.color]="'red'" [style.font-size.px]="'32'" >ANGULAR</h1>
+<h2 >{{data | uppercase }}{{" "+data1.name}}</h2>
+<hr>
+<form hidden>
+<p> <!--template reference variables-->
+  <label for="firstName">First Name</label>
+  <input (keyup)="0" type="text" #firstName id="firstName">
+ </p>
+  
+ <p>
+  <label for="lastName">Last Name</label>
+  <input (keyup)="0" type="text"  #lastName id="lastName">
+ </p>
+ <p>
+  
+  <input type="submit">
+ </p>
+ 
+</form>
+ <b>Welcome {{firstName.value | uppercase}} {{lastName.value | uppercase}} </b>
+ <p [ngStyle]="{'color': 'blue', 'font-size': '24px', 'font-weight': 'bold'}">{{dateCurrent | date:'mediumTime'}}</p>
+</div>
+<hr>
+<app-new-prac hidden/>
+<hr>
+<app-section1 />
+
+<button [ttClass]="'heading'">click here</button>
+<input type="text" name="name" id="name" #typing (keyup.control.enter)="countInc(typing)">
+
+<app-two-way-binding/>
+

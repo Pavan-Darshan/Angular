@@ -1,0 +1,14 @@
+
+<!--Ng class example-->
+<p [ngClass]="'secondary'">NgClass Example</p>
+<p ngClass="primary">NgClass Example</p>
+
+<p [ngClass]="{'cssClass1':true,'cssClass2':true}">NgClass Object Example</p>
+<!-- 
+<p [style.background-color]="'grey'">some paragraph with grey background with style binding</p> -->
+
+
+<!--style binding with condition-->
+<p [style.color]="status=='error'? 'red': 'green'">Error in loading</p>
+<p [ngClass]="status=='error'? 'secondary': 'green'">Error in loading</p>
+ 

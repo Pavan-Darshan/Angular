@@ -1,0 +1,7 @@
+<p>two-way-binding works!</p>
+
+<input type="text" name="value" [(ngModel)]="value">
+<p> You entered {{value}}</p>
+<button (click)="clearValue()">Clear</button>
+<hr>
+<input type="text"  #val ngModel (ngModelChange)="print(val)">
