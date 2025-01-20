@@ -28,10 +28,24 @@
 <hr>
 <app-new-prac hidden/>
 <hr>
-<app-section1 />
+<app-section1  hidden/>
 
 <button [ttClass]="'heading'">click here</button>
 <input type="text" name="name" id="name" #typing (keyup.control.enter)="countInc(typing)">
 
-<app-two-way-binding/>
+<app-two-way-binding hidden/>
 
+
+<app-pipe hidden/>
+<br><br><br>
+<!-- <button (click)="increment()">Increment</button> 
+<button (click)="decrement()">decrement</button> -->
+<app-child-component [parentData]="Counter" (send)="reciever($event)" #child1 hidden/>
+
+<!-- <p>Parent class </p>
+<p>{{recieved}}</p>
+
+<p>Child reference local variable :{{child1.newData}}</p> -->
+
+<app-comp-a/>
+<app-comp-b/>
