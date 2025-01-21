@@ -1,0 +1,31 @@
+<div>
+<!-- <input type="text" #values >
+<button (click)="send(values)">click</button>
+
+<button (click)="destroy()">Destroy</button> -->
+<!-- <app-child *ngIf="setBool" [childData]="data" hidden>
+    <p>This data was passed by parent component:{{data}}</p>
+</app-child>
+</div> -->
+<div>
+    <app-form/>
+    <button (click)="getProducts()">Get Product</button>
+</div>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of product;">
+                <td>{{item.productID}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

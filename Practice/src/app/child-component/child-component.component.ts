@@ -15,8 +15,6 @@ export class ChildComponentComponent {
 
  trigger(){
   return this.send.emit(this.newData);
-  
-  
  }
 
 }

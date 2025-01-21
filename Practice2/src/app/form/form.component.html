@@ -1,0 +1,31 @@
+<form #formData="ngForm" (ngSubmit)="onSubmit(formData)">
+ 
+    <p>
+      <label for="firstname">First Name </label>
+      <input type="text" id="firstname" name="fname"  [(ngModel)]="firstname">
+    </p>
+   
+    <p>
+      <label for="lastname">Last Name </label>
+      <input type="text" id="lastname" name="lname" [(ngModel)]="lastname">
+    </p>
+
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+
+    <p>
+        Value : {{formData.value |json}}
+    </p>
+
+    <p>
+        Valid : {{formData.valid}}
+    </p>
+    <p>
+        Touched : {{formData.touched}}
+    </p>
+    <p>
+        Submitted : {{formData.submitted}}
+    </p>
+
+</form>
