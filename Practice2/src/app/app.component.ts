@@ -21,6 +21,10 @@ setBool=true;
 destroy(){
     this.setBool=false;
 }
+
+
+// services------------------------------------->
+
  product?:Product[];
 services;
 constructor( ){
@@ -30,9 +34,5 @@ constructor( ){
 getProducts(){
   this.product = this.services.getProduct();
   console.log(this.services.getProduct());
-  
-}
-
-
-
+  }
 }
