@@ -1,0 +1,11 @@
+.container{
+ text-align: center;
+}
+.list{
+    padding: 10px;
+    background-color: rgb(174, 174, 174);
+    width: 30%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

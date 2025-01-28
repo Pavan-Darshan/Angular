@@ -1,0 +1,15 @@
+.header-list{
+    text-align: center;
+    background-color: rgb(202, 201, 200);
+    
+}
+a{
+    text-decoration: none;
+    padding: 25px;
+    color: black;
+}
+
+.active{
+    color:red;
+    font-size: bold;
+}
