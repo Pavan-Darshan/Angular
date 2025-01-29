@@ -1,0 +1,12 @@
+.bookList{
+    width: auto;
+    height: auto;
+    background-color: blueviolet;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+}
+.Container{
+    display: inline-flex;
+    
+}

@@ -1,0 +1,11 @@
+<div>
+
+    <p>Title : {{selectCourse.title}} </p>
+    <p>Price :  {{selectCourse.price}}</p>
+    <p>Rating :  {{selectCourse.rating}}</p>
+    <p>Author :  {{selectCourse.author}}</p>
+</div>
+<div>
+    <button [routerLink]="'../'+(selectCourse.id-1)">Prev</button>
+    <button [routerLink]="'../'+(selectCourse.id+1)">Next</button>
+</div>

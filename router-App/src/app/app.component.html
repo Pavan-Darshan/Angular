@@ -3,7 +3,22 @@
 
 <app-header/>
 
-
-
+<div>
+    <input type="text" #searchData>
+    <button [routerLink]="'/Course'" (click)="OnSearch(searchData.value)" >Search</button>
+</div>
 <router-outlet></router-outlet>
+
+
+<section id="about"><h3>About</h3>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, similique?</p>
+</section>
+
+<section id="contact"><h3>Contact</h3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, similique?</p>
+    </section>
+
+    <section id="course"><h3>Course</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, similique?</p>
+        </section>
 <app-footer/>

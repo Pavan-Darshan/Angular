@@ -1,0 +1,6 @@
+
+
+<div class="Container" *ngFor="let item of AllCourse" >
+    <p class="bookList" [routerLink]="'Course/'+item.id">{{item.title}}</p>
+
+</div>

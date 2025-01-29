@@ -1,4 +1,12 @@
-.active{
-    color:red;
-    font-size: bold;
+#contact,#about,#course{
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    background-color: aquamarine;
+}
+#about{
+    background-color: burlywood;
+}
+#course{
+    background-color: crimson;
 }

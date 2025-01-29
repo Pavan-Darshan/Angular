@@ -1,6 +1,14 @@
 <div class="header-list">
-    <a routerLink='Home' routerLinkActive="active">Home</a>
-    <a routerLink="Contact" routerLinkActive="active">Contact</a>
-    <a routerLink="About"  routerLinkActive="active">About</a>
     
+    <a routerLink='Home' routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+    <a routerLink="Contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Contact</a>
+    <a routerLink="About"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">About</a>
+    <a routerLink="Course"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Course</a>
+    
+</div>
+
+<div >
+    <a routerLink="Home" [fragment]="'about'">About</a>
+    <a routerLink="Home" [fragment]="'contact'">Contact</a>
+    <a routerLink="Home" [fragment]="'course'"> Course</a>
 </div>
