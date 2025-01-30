@@ -4,6 +4,8 @@
     <p>Price :  {{selectCourse.price}}</p>
     <p>Rating :  {{selectCourse.rating}}</p>
     <p>Author :  {{selectCourse.author}}</p>
+    <button routerLink="/Course/Checkout" >Buy</button>
+    
 </div>
 <div>
     <button [routerLink]="'../'+(selectCourse.id-1)">Prev</button>

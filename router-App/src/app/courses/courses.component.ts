@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { Observable } from 'rxjs';
 
 interface Course{
   id: number; 
@@ -43,7 +44,11 @@ ngOnInit(){
       this.searchData=data.get('serach');
 
       if(this.searchData === undefined || this.searchData === "" || this.searchData === null){
-        this.AllCourse = this.courses;
+        // this.getAllCourses().subscribe((data :Course[])=>{
+        //   this.AllCourse = data;
+        // });
+
+        this.AllCourse=this.activeRouter.snapshot.data['courses'];
       }
       else{
         this.AllCourse = this.courses.filter(x => x.title.toLocaleLowerCase().includes(this.searchData.toLocaleLowerCase()));
@@ -52,8 +57,14 @@ ngOnInit(){
 
   // this.searchData = this.activeRouter.snapshot.queryParamMap.get('search');
 
- 
+}
 
+getAllCourses(){
+  return new Observable<Course[]>((sub)=>{
+    setTimeout(()=>{
+        sub.next(this.courses)
+    },3000);
+  });
 }
 
 

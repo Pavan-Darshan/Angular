@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
 
 
 @Component({
@@ -11,9 +11,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'router-App';
-
+ 
 
  constructor(private router:Router){}
+ showLoader :boolean= false;
   
   OnSearch(data : string){
 
@@ -26,13 +27,23 @@ activeRouter : ActivatedRoute = inject(ActivatedRoute);
 ngOnInit(){
 
   this.activeRouter.fragment.subscribe((data)=>{
-    this.JumpSection(data);
-    
-  })
+    this.JumpSection(data);})
+
+    this.router.events.subscribe((routerEvent)=>{
+      if(routerEvent instanceof NavigationStart){
+        this.showLoader=true;
+      }
+
+      if(routerEvent instanceof NavigationEnd || routerEvent instanceof NavigationCancel || routerEvent instanceof NavigationError){
+        this.showLoader=false;
+      }
+    })
 
 }
 
 JumpSection(id :string){
-  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+
+    document.getElementById(id).scrollIntoView({behavior:'smooth'});
+
 }
 }
